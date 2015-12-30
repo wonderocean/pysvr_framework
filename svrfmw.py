@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import eventlet
 import json
+import os 
 import Module_Table as MT
 
 def SearchSvrFunc(i):
@@ -49,4 +50,12 @@ def server(ip='0.0.0.0',port=6000,poolnum=10000):
 
 #Main
 if __name__ == "__main__":
+
+	#daemon
+	pid = os.fork()
+	if(pid > 0):
+   		exit(0)
+	elif(pid == 0):
+		print 'begin to work...'
+
 	server()
