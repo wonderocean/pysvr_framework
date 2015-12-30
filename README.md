@@ -1,5 +1,6 @@
 # pysvr_framework
 a network service framwork in python based on eventlet
+the format of report is json
 
 svrfmw.py         #framwork main file,its an entrance of the framework
 
